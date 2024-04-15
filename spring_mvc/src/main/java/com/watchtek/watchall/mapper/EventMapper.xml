@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.watchtek.watchall.mapper.EventMapper">
+
+	<select id="getEventLevels" resultType="java.util.Map">
+		SELECT
+			eventlevel_id AS eventlevelId,
+			eventlevel_name AS eventlevelName,
+			eventlevel_color_bg AS eventlevelColorBg,
+			eventlevel_color_text AS eventlevelColorText,
+			orderby_index AS orderbyIndex
+		FROM
+			eventlevel
+		ORDER BY
+			orderby_index ASC
+	</select>
+</mapper>
